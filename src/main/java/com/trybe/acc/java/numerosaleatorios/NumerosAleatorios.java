@@ -2,13 +2,23 @@ package com.trybe.acc.java.numerosaleatorios;
 
 import java.util.Random;
 
+/** Classe Números Aleatórios. */
 public class NumerosAleatorios {
-  /**
-   * Método principal para a execuçao do código.
-   * 
-   */
+  
+  /** Método principal para a execução do código. */
   public static void main(String[] args) {
-    // Seu código vai aqui
+    int resultado = numeroAleatorio(); 
+    
+    while (resultado != 4) {
+      imprime(resultado);
+      
+      resultado = numeroAleatorio(); 
+    }
+    
+    if (resultado == 4) {
+      imprime(resultado);
+    }
+    
   }
 
   // Chame a função escrevendo `imprime()`.
@@ -26,4 +36,5 @@ public class NumerosAleatorios {
   int entreUmECinco() {
     return new Random().nextInt(5) + 1;
   }
+  
 }
